@@ -27,6 +27,7 @@ let newDrinkInput = document.querySelector('#new_drink_input');
 let newDrinkGroupBtn = document.querySelector('#new_drink_group');
 let newDrinkGroupInput = document.querySelector('#new_drink_group_input');
 let newDrinkList = document.querySelector('.new-drink__list');
+let deleteLocal = document.querySelector('#delete_local');
 let drinks = [];
 let inProcess = false;
 let counter = 0;
@@ -162,6 +163,10 @@ drinksSelect.addEventListener('change', handleChangeDrinksSelect);
 newDrinkBtn.addEventListener('click', handleAddNewDrink);
 newDrinkGroupBtn.addEventListener('click', handleSaveCustom);
 buttonAgain.addEventListener('click', handleRepeat);
+deleteLocal.addEventListener('click', function () {
+  localStorage.clear();
+  drinksSelect.innerHTML = `<option value="PITNICA">Чешская Питница г. Воронеж</option><option value="CUSTOM">НАЧИСЛИТЬ САМОСТОЯТЕЛЬНО</option>`
+});
 // drinksSelect.addEventListener('click', function () {
 //   if (inProcess) {
 //     let change = confirm('Если вы смените заведение, вакханалию придется начать заного. Продолжить?');
