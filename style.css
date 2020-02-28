@@ -1,3 +1,21 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	display: none;
+	height: 100vh;
+	padding-top: 60px;
+	background-color: bisque;
+	z-index: 10;
+	transform: translateX(-50%);
+}
+
 main {
   position: relative;
   height: 100vh;
@@ -17,18 +35,24 @@ main {
 }
 
 #randomize__name {
-  text-align: center;
   display: block;
-  font-size: 50px;
-  font-weight: 900;
+	max-width: 300px;
+	font-size: 42px;
+	text-align: center;
+	font-weight: 900;
   margin: 0 0 50px;
 }
 
-#randomize__button {
+#randomize__button,
+#randomize__button_again {
   padding: 10px;
-  width: 400px;
+  width: 300px;
   height: 100px;
   font-size: 30px;
+}
+
+#randomize__button_again {
+	display: none;
 }
 
 .glow-on-hover {
@@ -96,4 +120,145 @@ main {
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
+}
+
+#drinks_select {
+	width: 300px;
+}
+
+.drinks-select__wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.new-drink__wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.new-drink__wrap input {
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.drinks-select__name,
+.new-drink__name {
+	margin-bottom: 10px;
+}
+
+.new-drink__wrap {
+	display: none;
+}
+
+.burger {
+	content: '';
+	position: absolute;
+	left: 50%;
+	display: block;
+	width: 20px;
+	height: 4px;
+	margin-top: 30px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top: 4px solid #ffffff;
+	border-bottom: 4px solid #ffffff;
+	transform: translateX(-50%);
+	z-index: 2;
+	cursor: pointer;
+}
+
+.burger__center {
+	height: 4px;
+	width: 20px;
+	background-color: #ffffff;
+}
+
+.close-header {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: 30px;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.close-header::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 4px;
+	background-color: #ffffff;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-header::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 4px;
+	background-color: #ffffff;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.new-drink__list {
+	margin: 0;
+	padding: 0;
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+.new-drink__item {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.new-drink__item p {
+	margin: 0;
+	padding: 0;
+}
+
+.new-drink__item-delete {
+	content: '';
+	position: absolute;
+	right: 25px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	/*transform: translateX(-50%);*/
+	cursor: pointer;
+}
+
+.new-drink__item-delete::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 15px;
+	height: 3px;
+	background-color: #ffffff;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.new-drink__item-delete::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 15px;
+	height: 3px;
+	background-color: #ffffff;
+	transform: translate(-50%, -50%) rotate(-45deg);
 }
