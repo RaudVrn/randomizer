@@ -1,18 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Random</title>
+  <title>Drunkomizer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="close-header"></div>
+    <label class="drinks-select__wrap">
+      <span class="drinks-select__name">Выбери заведение</span>
+      <select id="drinks_select">
+        <option value="PITNICA">Чешская Питница г. Воронеж</option>
+        <option value="CUSTOM">НАЧИСЛИТЬ САМОСТОЯТЕЛЬНО</option>
+      </select>
+    </label>
+    <div class="new-drink__wrap">
+      <label>
+        <input id="new_drink_group_input" placeholder="Введи название группы напитков">
+      </label>
+      <ul class="new-drink__list"></ul>
+      <label>
+        <input id="new_drink_input" placeholder="Введи название напитка">
+      </label>
+      <button id="new_drink">Сохранить в список</button>
+      <button id="new_drink_group">Сохранить группу напитков и приступить к вакханалии</button>
+    </div>
+  </header>
   <main>
+    <div class="burger">
+      <div class="burger__center"></div>
+    </div>
     <div id="randomize__wrapper">
       <p id="randomize__name">Выбери что пьешь :)</p>
       <button class="glow-on-hover" id="randomize__button">Начать Вакханалию</button>
+      <button class="glow-on-hover" id="randomize__button_again">Всё выпили! Повторим?;)</button>
     </div>
   </main>
   <script src="app.js"></script>
