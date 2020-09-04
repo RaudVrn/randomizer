@@ -8,7 +8,7 @@ let drinksPlace = {
     'Сливочница',
     'Медовица',
     'Луговица',
-    'Чесночница',
+    'Абрикосовица'
   ]
 }
 
@@ -74,10 +74,12 @@ function handleChangeDrinksSelect(event) {
 }
 
 function setDefaultDrinksSelect() {
+  drinks = [];
   drinksPlace[drinksSelect.value].forEach(item => drinks.push(item))
 }
 
 function setDefaultState() {
+  drinks = [];
   button.innerText = 'Начать Вакханалию';
   drinkName.innerText = 'Выбери что пьешь :)';
   inProcess = false

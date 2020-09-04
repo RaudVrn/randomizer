@@ -124,6 +124,21 @@ main {
 
 #drinks_select {
 	width: 300px;
+	height: 35px;
+}
+
+#new_drink_group_input {
+	height: 35px;
+}
+
+#new_drink_input {
+	height: 35px;
+}
+
+#new_drink {
+	height: 30px;
+	width: 300px;
+	margin-bottom: 20px;
 }
 
 .drinks-select__wrap {
@@ -212,7 +227,7 @@ main {
 }
 
 .new-drink__list {
-	margin: 0;
+	margin: 0 20px 0;
 	padding: 0;
 	max-height: 300px;
 	overflow-y: scroll;
